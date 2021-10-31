@@ -4,8 +4,6 @@ import joblib
 import pandas as pd
 import numpy as np
 import pickle
-filename= r'C:\Users\hp\BIGMARTSALE\models.pkl'
-model = pickle.load(open(filename, 'rb'))
 app = Flask(__name__,template_folder='templates')
 
 @app.route("/")
@@ -102,8 +100,8 @@ def result():
 
     
     df = pd.DataFrame(features_value, columns=features_name)
-    model_path= r'C:\Users\hp\BIGMARTSALE\MODEL\XGBOOST.sav'
-    model= joblib.load(model_path)
+    file_path= r'C:\Users\hp\BIGMARTSALE\MODEL\XGBOOST.sav'
+    model= joblib.load(file_path)
 
 
     Y_pred = model.predict(df)
