@@ -99,8 +99,8 @@ def result():
 
     
     df = pd.DataFrame(features_value, columns=features_name)
-    model_path= r'C:\Users\hp\BIGMARTSALE\MODEL\XGBOOST.pkl'
-    model= joblib.load(model_path)
+    #model_path= r'C:\Users\hp\BIGMARTSALE\MODEL\XGBOOST.pkl'
+    model= joblib.load(r'C:\Users\hp\BIGMARTSALE\MODEL\XGBOOST.pkl')
 
 
     Y_pred = model.predict(df)
