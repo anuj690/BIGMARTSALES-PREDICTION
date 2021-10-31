@@ -66,7 +66,7 @@ model = XGBRegressor(learning_rate =0.1,n_estimators=100, max_depth=4,min_child_
                      colsample_bytree=0.9,random_state=42 )
 model.fit(X_prepared,y)
 file_path = r'C:\Users\hp\BIGMARTSALE\XGBOOST.sav'
-model= joblib.load(model_path)
+model= joblib.load(file_path)
 
 
 
