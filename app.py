@@ -3,11 +3,11 @@ import os
 import joblib
 import pandas as pd
 import numpy as np
-app = Flask(__name__)
+app = Flask(__name__,template_folder='templates')
 
 @app.route("/")
 def index():
-    return render_template("Sales.html")
+    return render_template('Sales.html')
 
 
 @app.route('/predict', methods=['POST','GET'])
