@@ -104,7 +104,7 @@ def result():
 
 
     Y_pred = model.predict(df)
-    return jsonify({'Prediction': float(Y_pred)})
+    return render_template('result.html',prediction = Y_pred)
 if __name__ == '__main__':
     app.run(debug=True)
 
