@@ -13,7 +13,7 @@ def index():
     return render_template('Sales.html')
 
 
-@app.route('/predict', methods=['POST','GET'])
+@app.route('/predict', methods=['POST'])
 def result():
     
     
