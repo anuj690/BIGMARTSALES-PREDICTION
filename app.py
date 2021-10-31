@@ -11,7 +11,7 @@ def index():
     return render_template('Sales.html')
 
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST','GET'])
 def result():
     
     
@@ -100,12 +100,12 @@ def result():
 
     
     df = pd.DataFrame(features_value, columns=features_name)
-    #file_path= r'C:\Users\hp\BIGMARTSALE\MODEL\XGBOOST.sav'
-    model= joblib.load(r'C:\Users\hp\BIGMARTSALE\MODEL\XGBOOST.sav')
+    #file_path= r'C:\Users\hp\BIGMARTSALE\MODEL\XGB.sav'
+    model= joblib.load(r'C:\Users\hp\BIGMARTSALE\MODEL\XGBOOST.pkl')
 
 
     Y_pred = model.predict(df)
-    return render_template('result.html',prediction = Y_pred)
+    return jsonify({'result.html',prediction = float(Y_pred)})
 if __name__ == '__main__':
     app.run(debug=True)
 
