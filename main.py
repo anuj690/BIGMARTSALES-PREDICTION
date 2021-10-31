@@ -65,7 +65,8 @@ from xgboost import XGBRegressor
 model = XGBRegressor(learning_rate =0.1,n_estimators=100, max_depth=4,min_child_weight=6,subsample=0.8,
                      colsample_bytree=0.9,random_state=42 )
 model.fit(X_prepared,y)
-joblib.dump(model,r'C:\Users\hp\BIGMARTSALE\MODEL\XGBOOST.pkl')
+file_name='XGBOOST.pkl'
+joblib.dump(model,fie_name)
 
 
 
