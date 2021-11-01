@@ -67,7 +67,7 @@ model = XGBRegressor(learning_rate =0.1,n_estimators=100, max_depth=4,min_child_
 model.fit(X_prepared,y)
 
 
-joblib.dump(model,r"C:\Users\hp\BIGMARTSALE\XGBOOST.pkl")
+joblib.dump(model,"XGBOOST.pkl")
 
 
     
